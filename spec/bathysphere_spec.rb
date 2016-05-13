@@ -6,6 +6,7 @@ describe Bathysphere do
   end
 
   it 'does something useful' do
+    pending "What is useful is still in discussion. Interested? See doc/README.md!"
     expect(false).to eq(true)
   end
 end
