@@ -1,0 +1,4 @@
+steps:
+  - name: Public API
+    command: bundle install --deployment && bundle exec rake
+
