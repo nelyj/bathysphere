@@ -24,6 +24,15 @@ Add the gem to your `Gemfile`:
 gem 'bathysphere', '0.1.0' # see semver.org
 ```
 
+Credits
+-------
+
+[![Redbubble](doc/redbubble.png)][redbubble]
+
+Bathyspere is maintained and funded by [Redbubble][redbubble].
+
+  [redbubble]: https://www.redbubble.com
+
 License
 -------
 
