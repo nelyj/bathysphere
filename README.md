@@ -29,9 +29,9 @@ gem 'bathysphere', '0.1.0' # see semver.org
 Credits
 -------
 
-[![Redbubble](doc/redbubble.png)][redbubble]
+[![](doc/redbubble.png)][redbubble]
 
-Bathyspere is maintained and funded by [Redbubble][redbubble].
+Bathysphere is maintained and funded by [Redbubble][redbubble].
 
   [redbubble]: https://www.redbubble.com
 
