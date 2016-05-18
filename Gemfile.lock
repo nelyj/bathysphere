@@ -55,7 +55,6 @@ PLATFORMS
 DEPENDENCIES
   aruba (~> 0.14.0)
   bathysphere!
-  bundler (~> 1.11)
   cucumber (~> 2.0)
   rake (>= 10.0, < 12)
   rspec (~> 3.0)
