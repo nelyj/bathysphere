@@ -26,7 +26,7 @@ Feature: Easy duck typing
     And a file named "config/products/vehicle.yml" with:
       """
       ---
-      display_names:
+      display_name:
         key: 'size'
         values:
           large: 'Train'
@@ -78,8 +78,8 @@ Feature: Easy duck typing
       products = [
         Fruit.new(:large, :purple),
         Vehicle.new(:small),
-        Fruit.new(:small, :red),
-        Fruit.new(:small, :yellow),
+        Fruit.new(:small, :green),
+        Fruit.new(:small, :orange),
         Vehicle.new(:large),
       ]
 
@@ -91,6 +91,6 @@ Feature: Easy duck typing
       Then the output should contain:
       """
       All products have a display name.
-      ["Eggplant", "Bike", "Strawberry", "Kumquat", "Train"]
+      ["Eggplant", "Bike", "Grape", "Kumquat", "Train"]
       """
 
