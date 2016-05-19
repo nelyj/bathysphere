@@ -28,8 +28,9 @@ module Bathysphere
 
       def fetch_recursively(option_value, *refinements)
         keys(option_value).inject(values(option_value)) { |data, key|
-          data.fetch(refinements.shift.to_s) do
-            raise KeyError, "key not found #{option_name.to_s.inspect} in #{file}"
+          refinement = refinements.shift.to_s
+          data.fetch(refinement) do
+            raise KeyError, "key not found #{refinement.inspect} in #{file}"
           end
         }
       end
