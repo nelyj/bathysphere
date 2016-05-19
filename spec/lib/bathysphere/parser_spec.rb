@@ -19,10 +19,17 @@ module Bathysphere
           end
         end
 
-        context 'when the propery is not available' do
+        context 'when the property is not available' do
 
           it 'raises KeyError and mentions the parsed file in the message' do
             expect{ parser.fetch(:weight, :large, :purple) }.to raise_error KeyError, Regexp.new(file)
+          end
+        end
+
+        context 'when a property of the path is not available' do
+
+          it 'raises KeyError and mentions the parsed file in the message' do
+            expect{ parser.fetch(:display_name, :tiny, :purple) }.to raise_error KeyError, Regexp.new(file)
           end
         end
       end

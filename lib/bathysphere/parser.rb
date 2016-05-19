@@ -15,7 +15,11 @@ module Bathysphere
       'Display name!'
 
       keys(option_name).inject(raw_values(option_name)){ |data, key|
-        data.fetch(refinements.shift.to_s)
+        begin
+          data.fetch(refinements.shift.to_s)
+        rescue
+          raise KeyError, "key not found #{option_name.inspect} in #{file}"
+        end
       }
     end
 
