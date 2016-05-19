@@ -1,0 +1,16 @@
+---
+display_name:
+  key: 'size,color'
+  values:
+    small:
+      green: 'Grape'
+      orange: 'Kumquat'
+      purple: 'Blueberry'
+    medium:
+      green: 'Pear'
+      orange: 'Orange'
+      purple: 'Plum'
+    large:
+      green: 'Watermelon'
+      orange: 'Melon'
+      purple: 'Eggplant'
