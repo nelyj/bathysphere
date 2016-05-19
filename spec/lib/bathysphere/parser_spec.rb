@@ -29,7 +29,19 @@ module Bathysphere
         context 'when a property of the path is not available' do
 
           it 'raises KeyError and mentions the parsed file in the message' do
-            expect{ parser.fetch(:display_name, :tiny, :purple) }.to raise_error KeyError, Regexp.new(file)
+            expect{ parser.fetch(:weight, :tiny, :purple) }.to raise_error KeyError, Regexp.new(file)
+          end
+        end
+      end
+
+      context 'when the property has no deeply nested values' do
+
+        let(:file) { 'spec/fixtures/simple.yml' }
+
+        context 'when the property is available' do
+
+          it 'behaves as usual' do
+            expect(parser.fetch(:display_name)).to eq 'Mountain'
           end
         end
       end

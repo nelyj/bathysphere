@@ -12,15 +12,24 @@ module Bathysphere
     end
 
     def fetch(option_name, *refinements)
-      'Display name!'
 
-      keys(option_name).inject(raw_values(option_name)){ |data, key|
-        begin
-          data.fetch(refinements.shift.to_s)
-        rescue KeyError
-          raise KeyError, "key not found #{option_name.inspect} in #{file}"
-        end
-      }
+      begin
+        option_data = @data.fetch(option_name.to_s)
+      rescue KeyError
+        raise KeyError, "key not found #{option_name.to_s.inspect} in #{file}"
+      end
+
+      if @data.fetch(option_name.to_s).kind_of?(Hash)
+        keys(option_name).inject(raw_values(option_name)){ |data, key|
+          begin
+            data.fetch(refinements.shift.to_s)
+          rescue KeyError
+            raise KeyError, "key not found #{option_name.to_s.inspect} in #{file}"
+          end
+        }
+      else
+        @data.fetch(option_name.to_s)
+      end
     end
 
     private
@@ -32,13 +41,13 @@ module Bathysphere
       def raw_values(option_name)
         @data.fetch(option_name.to_s).fetch('values', '')
       rescue KeyError
-        raise KeyError, "key not found #{option_name.inspect} in #{file}"
+        raise KeyError, "key not found #{option_name.to_s.inspect} in #{file}"
       end
 
       def raw_key(option_name)
         @data.fetch(option_name.to_s).fetch('key', '')
       rescue KeyError
-        raise KeyError, "key not found #{option_name.inspect} in #{file}"
+        raise KeyError, "key not found #{option_name.to_s.inspect} in #{file}"
       end
   end
 end
