@@ -17,7 +17,7 @@ module Bathysphere
       keys(option_name).inject(raw_values(option_name)){ |data, key|
         begin
           data.fetch(refinements.shift.to_s)
-        rescue
+        rescue KeyError
           raise KeyError, "key not found #{option_name.inspect} in #{file}"
         end
       }
@@ -31,13 +31,13 @@ module Bathysphere
 
       def raw_values(option_name)
         @data.fetch(option_name.to_s).fetch('values', '')
-      rescue
+      rescue KeyError
         raise KeyError, "key not found #{option_name.inspect} in #{file}"
       end
 
       def raw_key(option_name)
         @data.fetch(option_name.to_s).fetch('key', '')
-      rescue
+      rescue KeyError
         raise KeyError, "key not found #{option_name.inspect} in #{file}"
       end
   end
