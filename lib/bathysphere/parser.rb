@@ -18,7 +18,7 @@ module Bathysphere
       end
 
       if option_value.kind_of?(Hash)
-        fetch_recursively(option_name, *refinements)
+        fetch_recursively(option_value, *refinements)
       else
         option_value
       end
@@ -26,28 +26,20 @@ module Bathysphere
 
     private
 
-      def fetch_recursively(option_name, *refinements)
-        keys(option_name).inject(raw_values(option_name)) { |data, key|
+      def fetch_recursively(option_value, *refinements)
+        keys(option_value).inject(values(option_value)) { |data, key|
           data.fetch(refinements.shift.to_s) do
             raise KeyError, "key not found #{option_name.to_s.inspect} in #{file}"
           end
         }
       end
 
-      def keys(option_name)
-        raw_key(option_name).split(',')
+      def keys(option_value)
+        option_value.fetch('key', '').split(',')
       end
 
-      def raw_values(option_name)
-        @data.fetch(option_name.to_s) {
-          raise KeyError, "key not found #{option_name.to_s.inspect} in #{file}"
-        }.fetch('values', '')
-      end
-
-      def raw_key(option_name)
-        @data.fetch(option_name.to_s) {
-          raise KeyError, "key not found #{option_name.to_s.inspect} in #{file}"
-        }.fetch('key', '')
+      def values(option_value)
+        option_value.fetch('values', '')
       end
   end
 end
