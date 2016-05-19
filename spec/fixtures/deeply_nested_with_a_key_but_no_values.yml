@@ -1,0 +1,6 @@
+---
+display_name:
+  key: 'size'
+  large: 'kangaroo'
+  medium: 'wombat'
+  small: 'possum'

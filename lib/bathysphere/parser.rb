@@ -36,11 +36,14 @@ module Bathysphere
       end
 
       def keys(option_value)
+
         option_value.fetch('key', '').split(',')
       end
 
       def values(option_value)
-        option_value.fetch('values', '')
+        option_value.fetch('values') do
+          raise KeyError, "key not found \"values\" in #{file}"
+        end
       end
   end
 end
