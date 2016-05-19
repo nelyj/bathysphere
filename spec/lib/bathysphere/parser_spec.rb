@@ -12,36 +12,41 @@ module Bathysphere
 
       context 'when built from a valid YAML file' do
 
-        context 'when the property is available' do
+        context 'with deeply nested values' do
 
-          it 'returns its value' do
-            expect(parser.fetch(:display_name, :large, :purple)).to eq 'Eggplant'
+          let(:file) { 'spec/fixtures/fruit.yml' }
+
+          context 'when the property is available' do
+
+            it 'returns its value' do
+              expect(parser.fetch(:display_name, :large, :purple)).to eq 'Eggplant'
+            end
+          end
+
+          context 'when the property is not available' do
+
+            it 'raises KeyError and mentions the parsed file in the message' do
+              expect{ parser.fetch(:weight, :large, :purple) }.to raise_error KeyError, Regexp.new(file)
+            end
+          end
+
+          context 'when a property of the path is not available' do
+
+            it 'raises KeyError and mentions the parsed file in the message' do
+              expect{ parser.fetch(:weight, :tiny, :purple) }.to raise_error KeyError, Regexp.new(file)
+            end
           end
         end
 
-        context 'when the property is not available' do
+        context 'with no deeply nested values' do
 
-          it 'raises KeyError and mentions the parsed file in the message' do
-            expect{ parser.fetch(:weight, :large, :purple) }.to raise_error KeyError, Regexp.new(file)
-          end
-        end
+          let(:file) { 'spec/fixtures/simple.yml' }
 
-        context 'when a property of the path is not available' do
+          context 'when the property is available' do
 
-          it 'raises KeyError and mentions the parsed file in the message' do
-            expect{ parser.fetch(:weight, :tiny, :purple) }.to raise_error KeyError, Regexp.new(file)
-          end
-        end
-      end
-
-      context 'when the property has no deeply nested values' do
-
-        let(:file) { 'spec/fixtures/simple.yml' }
-
-        context 'when the property is available' do
-
-          it 'behaves as usual' do
-            expect(parser.fetch(:display_name)).to eq 'Mountain'
+            it 'retruns its value (as Hash#fetch does)' do
+              expect(parser.fetch(:display_name)).to eq 'Mountain'
+            end
           end
         end
       end
