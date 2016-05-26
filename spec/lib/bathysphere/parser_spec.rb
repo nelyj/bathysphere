@@ -38,7 +38,7 @@ module Bathysphere
           end
         end
 
-        context 'with depply nested values but no :key' do
+        context 'with deeply nested values but no :key' do
 
           let(:file) { 'spec/fixtures/deeply_nested_with_no_key.yml' }
 
@@ -52,9 +52,9 @@ module Bathysphere
 
           let(:file) { 'spec/fixtures/deeply_nested_with_a_key_but_no_values.yml' }
 
-            it 'raises KeyError and mentions the parsed file in the message' do
-              expect{ parser.fetch(:display_name, :large) }.to raise_error KeyError, Regexp.new(file)
-            end
+          it 'raises KeyError and mentions the parsed file in the message' do
+            expect{ parser.fetch(:display_name, :large) }.to raise_error KeyError, Regexp.new(file)
+          end
         end
 
         context 'with no deeply nested properties' do
@@ -63,16 +63,16 @@ module Bathysphere
 
           context 'when the property is available' do
 
-            it 'retruns its value (as Hash#fetch does)' do
+            it 'returns its value (as Hash#fetch does)' do
               expect(parser.fetch(:display_name)).to eq 'Mountain'
             end
           end
-        end
 
-        context 'when the property is not available' do
+          context 'when the property is not available' do
 
-          it 'raises KeyError and mentions the parsed file in the message' do
-            expect{ parser.fetch(:weight) }.to raise_error KeyError, Regexp.new(file)
+            it 'raises KeyError and mentions the parsed file in the message' do
+              expect{ parser.fetch(:weight) }.to raise_error KeyError, Regexp.new(file)
+            end
           end
         end
       end
