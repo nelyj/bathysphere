@@ -7,5 +7,5 @@ spec/reports
 tmp
 *.gem
 *~
-vendore/bundle
+vendor/bundle
 
