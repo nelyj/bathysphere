@@ -57,7 +57,7 @@ display_name:
 # config/product/vehicle.yml
 
 ---
-display_names:
+display_name:
   key: 'size'
   values:
     large: 'Train'
