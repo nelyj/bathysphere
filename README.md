@@ -1,7 +1,7 @@
 Bathysphere
 ===========
 
-[![Build Status](https://badge.buildkite.com/48b510c31a0346981a0456d2985675ccd465257cfec6ff9cb4.svg)](https://buildkite.com/redbubble/bathysphere)
+[![Build Status](https://badge.buildkite.com/48b510c31a0346981a0456d2985675ccd465257cfec6ff9cb4.svg?branch=master)](https://buildkite.com/redbubble/bathysphere)
 
 Fetch arbitrarily deep properties from YAML files without loosing your breath.
 
