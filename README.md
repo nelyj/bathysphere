@@ -18,13 +18,26 @@ depths in distinct configuration files.
 Installation
 ------------
 
+The gem is private and hosted by [Gem Fury][gemfury]. If you haven't done it yet, set up Bundler to use Gem Fury:
+
+```bash
+# Make our Gem Fury authentication token available to Bundler
+bundle config https://gem.fury.io/redbubble L00k_at_L4sTPaSS_foR_The_T0keN
+```
+
 Add the gem to your `Gemfile`:
 
 ```ruby
 # Gemfile
 
-gem 'bathysphere', '0.1.0' # see semver.org
+source 'https://gem.fury.io/redbubble' do
+
+  gem 'bathysphere', '0.1.0' # see semver.org
+
+end
 ```
+
+  [gemfury]: https://gemfury.com
 
 Usage
 -----
