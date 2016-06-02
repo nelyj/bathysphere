@@ -32,7 +32,7 @@ Add the gem to your `Gemfile`:
 
 source 'https://gem.fury.io/redbubble' do
 
-  gem 'bathysphere', '0.1.0' # see semver.org
+  gem 'bathysphere', '0.2.0' # see semver.org
 
 end
 ```
