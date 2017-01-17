@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bathysphere (0.2.0)
+    bathysphere (1.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -60,4 +60,4 @@ DEPENDENCIES
   rspec (~> 3.0)
 
 BUNDLED WITH
-   1.12.3
+   1.12.5
