@@ -217,6 +217,15 @@ class Vehicle < Product
 end
 ```
 
+Contributions
+-------------
+
+Contributions are welcome! Please feel free to open issues or pull requests to get help or discuss ideas or implementations. Note that opening pull requests with work in progress is not only welcome, but encouraged! Talk early, talk often, and we will all learn in the way :)
+
+Finally, please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
+
+  [coc]: ./CODE_OF_CONDUCT.md
+
 Credits
 -------
 
