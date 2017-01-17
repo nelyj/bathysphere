@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+- Contributor Code of Conduct for a friendly, inclusive community.
+
 ## [0.2.0] - 2016-06-02
 
 ### Added
@@ -24,4 +30,5 @@ The YAML-based self-describing data format was used in Asset Wala.
 
 See http://keepachangelog.com!
 
+  [Unreleased]: https://github.com/redbubble/bathysphere/compare/v0.2.0...master
   [0.2.0]: https://github.com/redbubble/bathysphere/compare/v0.1.0...v0.2.0

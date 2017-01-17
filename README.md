@@ -1,7 +1,11 @@
 Bathysphere
 ===========
 
-[![Build Status](https://badge.buildkite.com/48b510c31a0346981a0456d2985675ccd465257cfec6ff9cb4.svg?branch=master)](https://buildkite.com/redbubble/bathysphere)
+[![Gem Version](https://badge.fury.io/rb/bathysphere.svg)](http://badge.fury.io/rb/bathysphere)
+[![Build Status](https://travis-ci.org/redbubble/bathysphere.svg?branch=master)](https://travis-ci.org/redbubble/bathysphere)
+[![Code Climate](https://codeclimate.com/github/redbubble/bathysphere.svg)](https://codeclimate.com/github/redbubble/bathysphere)
+[![Dependency Status](https://gemnasium.com/redbubble/bathysphere.svg)](https://gemnasium.com/redbubble/bathysphere)
+[![Inline docs](http://inch-ci.org/github/redbubble/bathysphere.svg?branch=master)](http://inch-ci.org/github/redbubble/bathysphere)
 
 Fetch arbitrarily deep properties from YAML files without loosing your breath.
 
@@ -18,23 +22,12 @@ depths in distinct configuration files.
 Installation
 ------------
 
-The gem is private and hosted by [Gem Fury][gemfury]. If you haven't done it yet, set up Bundler to use Gem Fury:
-
-```bash
-# Make our Gem Fury authentication token available to Bundler
-bundle config https://gem.fury.io/redbubble L00k_at_L4sTPaSS_foR_The_T0keN
-```
-
 Add the gem to your `Gemfile`:
 
 ```ruby
 # Gemfile
 
-source 'https://gem.fury.io/redbubble' do
-
-  gem 'bathysphere', '0.2.0' # see semver.org
-
-end
+gem 'bathysphere', '0.2.0' # see semver.org
 ```
 
   [gemfury]: https://gemfury.com
@@ -217,6 +210,15 @@ class Vehicle < Product
 end
 ```
 
+Contributions
+-------------
+
+Contributions are welcome! Please feel free to open issues or pull requests to get help or discuss ideas or implementations. Note that opening pull requests with work in progress is not only welcome, but encouraged! Talk early, talk often, and we will all learn in the way :)
+
+Finally, please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
+
+  [coc]: ./CODE_OF_CONDUCT.md
+
 Credits
 -------
 
@@ -229,10 +231,25 @@ Bathysphere is maintained and funded by [Redbubble][redbubble].
 License
 -------
 
-```
-Bathysphere
-Copyright (C) 2016 Redbubble
+		Bathysphere
+		Copyright (C) 2016, 2017 Redbubble
 
-All rights reserved.
-```
+		Permission is hereby granted, free of charge, to any person obtaining
+		a copy of this software and associated documentation files (the
+		"Software"), to deal in the Software without restriction, including
+		without limitation the rights to use, copy, modify, merge, publish,
+		distribute, sublicense, and/or sell copies of the Software, and to
+		permit persons to whom the Software is furnished to do so, subject to
+		the following conditions:
+
+		The above copyright notice and this permission notice shall be included
+		in all copies or substantial portions of the Software.
+
+		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+		EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+		MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+		IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+		CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+		TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+		SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
