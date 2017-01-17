@@ -1,7 +1,11 @@
 Bathysphere
 ===========
 
-[![Build Status](https://badge.buildkite.com/48b510c31a0346981a0456d2985675ccd465257cfec6ff9cb4.svg?branch=master)](https://buildkite.com/redbubble/bathysphere)
+[![Gem Version](https://badge.fury.io/rb/bathysphere.svg)](http://badge.fury.io/rb/bathysphere)
+[![Build Status](https://travis-ci.org/redbubble/bathysphere.svg?branch=master)](https://travis-ci.org/redbubble/bathysphere)
+[![Code Climate](https://codeclimate.com/github/redbubble/bathysphere.svg)](https://codeclimate.com/github/redbubble/bathysphere)
+[![Dependency Status](https://gemnasium.com/redbubble/bathysphere.svg)](https://gemnasium.com/redbubble/bathysphere)
+[![Inline docs](http://inch-ci.org/github/redbubble/bathysphere.svg?branch=master)](http://inch-ci.org/github/redbubble/bathysphere)
 
 Fetch arbitrarily deep properties from YAML files without loosing your breath.
 
